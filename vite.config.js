@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  // GitHub Pages 部署時，請將 'equipment-booking-system' 改成你的 repo 名稱
+  base: '/equipment-booking-system/',
 })

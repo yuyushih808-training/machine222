@@ -90,19 +90,42 @@ equipment-booking-system/
 
 ## 🌐 部署到 GitHub Pages
 
-1. 修改 `vite.config.js`，設定 `base` 為你的 repo 名稱：
-   ```js
-   base: '/your-repo-name/',
-   ```
+本專案已內建 GitHub Actions 自動部署，只需完成以下設定：
 
-2. 建置專案：
-   ```bash
-   npm run build
-   ```
+### 步驟 1：修改 Repo 名稱（重要！）
 
-3. 部署 `dist` 資料夾到 GitHub Pages
+編輯 `vite.config.js`，將 base 改成你的 repo 名稱：
 
-或使用 GitHub Actions 自動部署（建議）
+```js
+base: '/你的repo名稱/',
+```
+
+### 步驟 2：啟用 GitHub Pages
+
+1. 前往 GitHub repo 頁面
+2. 點擊 **Settings** (設定)
+3. 左側選單點擊 **Pages**
+4. **Source** 選擇 **GitHub Actions**
+5. 完成！
+
+### 步驟 3：推送程式碼
+
+```bash
+git add .
+git commit -m "Enable GitHub Pages"
+git push
+```
+
+推送後，GitHub Actions 會自動建置並部署。
+
+### 步驟 4：查看網站
+
+部署完成後，網站網址為：
+```
+https://你的帳號.github.io/你的repo名稱/
+```
+
+可在 repo 的 **Actions** 頁籤查看部署狀態。
 
 ## 📄 授權
 
